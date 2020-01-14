@@ -1,0 +1,18 @@
+
+apply plugin: 'java-library'
+apply plugin:'groovy'
+dependencies {
+    api gradleApi()
+    api localGroovy()
+    //添加这个才能使用transform的很多api 要加仓库地址
+    api 'com.android.tools.build:gradle:3.5.3'
+}
+repositories {
+    repositories {
+        maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
+        google()
+        jcenter()
+    }
+}
+sourceCompatibility = "7"
+targetCompatibility = "7"
